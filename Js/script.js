@@ -18,8 +18,8 @@ createApp({
             axios.get(this.apiUrl)
             .then((response) => {
                 //se la chiamata va a buon fine 
-
-            this.emails = response.data;    
+                console.log(response.data);
+            this.emails.push(response.data.response);    
 
             })
 
@@ -31,7 +31,11 @@ createApp({
     },
 
     mounted(){
-        this.getApi();
+        for(let i=0; i<10; i++){
+        
+            this.getApi();  
+        }
+        
     }
 
     
