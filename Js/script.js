@@ -21,9 +21,6 @@ createApp({
 
             this.emails = response.data;    
 
-            for (const email of this.emails){
-                console.log(email);
-            }
             })
 
             .catch(errore => {
